@@ -1,9 +1,9 @@
 import pandas as pd
 
-def read_last_column(csv_file_path):
-    """Read the last column of a CSV file."""
-    df = pd.read_csv(csv_file_path)
-    return df.iloc[:, -1]
+# def read_last_column(csv_file_path):
+#     """Read the last column of a CSV file."""
+#     df = pd.read_csv(csv_file_path)
+#     return df.iloc[:, -1]
 
 def divide_into_sections(column_data):
     """Divide a pandas Series into 3 equal parts."""
@@ -27,6 +27,6 @@ def write_sections_to_files(sections, base_filepath="/mnt/data/section"):
 
 # Example usage:
 csv_file_path = 'path_to_your_file/INFO.csv'  # Make sure to update this path
-last_column = read_last_column(csv_file_path)
-sections = divide_into_sections(last_column)
+# last_column = read_last_column(csv_file_path)
+sections = divide_into_sections(csv_file_path)
 write_sections_to_files(sections)
